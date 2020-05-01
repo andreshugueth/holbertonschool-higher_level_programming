@@ -12,11 +12,11 @@ if __name__ == "__main__":
     a = int(argv[0])
     operator = argv[1]
     b = int(argv[2])
-    
+
     if operator == '+':
         operation = add(a, b)
     elif operator == '-':
-        operation = sub(a,b)
+        operation = sub(a, b)
     elif operator == '*':
         operation = mul(a, b)
     elif operator == '/':
@@ -24,5 +24,5 @@ if __name__ == "__main__":
     else:
         print("Unknown operator. Available operators: +, -, * and /")
         exit(1)
-    
+
     print("{} {} {} = {}".format(a, operator, b, operation))
