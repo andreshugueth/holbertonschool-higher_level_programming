@@ -5,8 +5,7 @@ def element_at(my_list, idx):
     count = 0
     for n in my_list:
         count += 1
-    if idx <= count:
+    if idx < count:
         return my_list[idx]
     else:
         return None
-
