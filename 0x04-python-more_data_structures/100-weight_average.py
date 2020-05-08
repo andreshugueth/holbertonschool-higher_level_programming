@@ -9,3 +9,4 @@ def weight_average(my_list=[]):
             divident += n1 * n2
             divisor += n2
         return divident / divisor
+    return 0
