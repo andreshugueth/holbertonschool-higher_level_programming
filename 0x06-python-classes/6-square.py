@@ -30,7 +30,6 @@ class Square:
         if self.__size < 0:
             print()
         else:
-           if self.__size > 0:
             if self.__position[1] > 0:
                 for newline in range(self.__position[1]):
                     print("")
