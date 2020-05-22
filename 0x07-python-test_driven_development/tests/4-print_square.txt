@@ -1,0 +1,39 @@
+# 4-print_square.txt
+===============================
+ How to Use doctest_in_help.py
+===============================
+
+This library is very simple, since it only has one function called
+``my_function()``.
+
+Numbers
+=======
+
+``my_function()`` returns the product of its arguments.  For numbers,
+that value is equivalent to using the ``*`` operator.
+
+::
+
+	>>> print_square = __import__('4-print_square').print_square
+	>>> print_square(4)
+	####
+	####
+	####
+	####
+
+::
+
+	>>> print_square(0)
+	 
+
+::
+
+	>>> print_square(1)
+	#
+
+::
+
+	>>> print_square(-1)
+	Traceback (most recent call last):
+		...
+	size must be >= 0
