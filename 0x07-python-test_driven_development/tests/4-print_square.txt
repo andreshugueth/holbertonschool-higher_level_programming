@@ -1,6 +1,6 @@
 # 4-print_square.txt
 ===============================
- How to Use doctest_in_help.py
+ How to Use 4-print_square.py
 ===============================
 
 This library is very simple, since it only has one function called
@@ -36,4 +36,11 @@ that value is equivalent to using the ``*`` operator.
 	>>> print_square(-1)
 	Traceback (most recent call last):
 		...
-	size must be >= 0
+	ValueError: size must be >= 0
+
+::
+
+	>>> print_square(None)
+	Traceback (most recent call last):
+		...
+	TypeError: size must be an integer
