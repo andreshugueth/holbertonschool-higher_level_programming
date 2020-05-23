@@ -9,7 +9,7 @@ class TestMaxInteger(unittest.TestCase):
     """TestMaxInteger
 
     Arguments:
-        unittest {[type]} -- [description]
+        unittest
     """
     def test_doc(self):
         self.assertTrue(len(max_integer.__doc__) > 1)
