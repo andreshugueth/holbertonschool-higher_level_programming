@@ -31,7 +31,7 @@ Trying with int
 ::
 
 	>>> say_my_name("15")
-	My name is 15
+	My name is 15 
 
 ::
 
