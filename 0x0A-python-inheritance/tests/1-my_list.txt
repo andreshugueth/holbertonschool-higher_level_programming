@@ -1,0 +1,31 @@
+# 1-my_list.txt
+===============================
+ How to Use 1-my_list.py
+===============================
+
+Numbers
+=======
+
+``def print_sorted(self)`` print a sorted list
+
+::
+
+	>>> MyList = __import__('1-my_list').MyList
+	>>> my_list = MyList()
+	>>> my_list.append(1)
+	>>> my_list.append(4)
+	>>> my_list.append(2)
+	>>> my_list.append(3)
+	>>> my_list.append(5)
+	>>> my_list.print_sorted()
+	[1, 2, 3, 4, 5]
+
+::
+
+	>>> MyList2 = MyList()
+	>>> MyList2.append(3)
+	>>> MyList2.append(2)
+	>>> MyList2.append(1)
+	>>> my_list.print_sorted()
+	[1, 2, 3, 4, 5]
+
