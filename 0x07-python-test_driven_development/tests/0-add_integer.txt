@@ -66,6 +66,7 @@ Cannot convert float NaN to integer
 		...
 	Traceback (most recent call last):
 
+
 Parameter float('inf')
 
 ::
