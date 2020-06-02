@@ -64,7 +64,7 @@ Cannot convert float NaN to integer
 	>>> add_integer(float('NaN'))
 	Traceback (most recent call last):
 		...
-	Traceback (most recent call last):
+	ValueError: cannot convert float NaN to integer
 
 
 Parameter float('inf')
