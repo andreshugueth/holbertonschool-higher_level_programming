@@ -55,5 +55,11 @@ class TestMaxInteger(unittest.TestCase):
     def test_docstring(self):
         self.assertTrue(len(__import__('6-max_integer').__doc__) > 1)
 
+    def test_max_normal(self):
+        self.assertIs(max_integer([4, 5, 10, 50, 60]), 60)
+
+    def test_max_normal2(self):
+        self.assertIs(max_integer([100, 5, 10, 50, 60]), 100)
+
 if __name__ == "__main__":
     unittest.main()
