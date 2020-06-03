@@ -74,4 +74,17 @@
 	...
 	TypeError: integer_validator() takes 3 positional arguments but 4 were given
 
+::
+
+	>>> bg.integer_validator('name', 12.5)
+	Traceback (most recent call last):
+	...
+	TypeError: name must be an integer
+
+::
+
+	>>> bg.integer_validator('name', True)
+	Traceback (most recent call last):
+	...
+	TypeError: name must be an integer
 
