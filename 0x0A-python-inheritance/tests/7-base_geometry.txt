@@ -88,3 +88,26 @@
 	...
 	TypeError: name must be an integer
 
+::
+
+	>>> doc = BaseGeometry = __import__('7-base_geometry').__doc__
+	>>> len(doc) > 1
+	True
+
+:: 
+
+	>>> doc = BaseGeometry = __import__('7-base_geometry').BaseGeometry.__doc__
+	>>> len(doc) > 1
+	True
+
+::
+
+	>>> doc = BaseGeometry = __import__('7-base_geometry').BaseGeometry.area.__doc__
+	>>> len(doc) > 1
+	True
+
+::
+
+	>>> doc = BaseGeometry = __import__('7-base_geometry').BaseGeometry.integer_validator.__doc__
+	>>> len(doc) > 1
+	True
