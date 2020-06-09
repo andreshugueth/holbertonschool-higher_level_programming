@@ -61,7 +61,7 @@ class Base:
                 info = f.read()
         except:
             return obj_list
-        
+
         json_info = Base.from_json_string(info)
 
         for obj in json_info:
