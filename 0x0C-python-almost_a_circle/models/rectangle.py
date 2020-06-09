@@ -86,7 +86,7 @@ class Rectangle(Base):
                self.__x, self.__y, self.__width, self.__height))
         return msg
 
-    def update(self, *args):
+    def update(self, *args, **kwargs):
         """update function"""
         if len(args):
             for element, value in enumerate(args):
@@ -100,3 +100,14 @@ class Rectangle(Base):
                     self.x = value
                 if element == 4:
                     self.y = value
+        else:
+            if "id" in kwargs:
+                self.id = kwargs["id"]
+            if "width" in kwargs:
+                self.width = kwargs["width"]
+            if "height" in kwargs:
+                self.height = kwargs["height"]
+            if "x" in kwargs:
+                self.x = kwargs["x"]
+            if "y" in kwargs:
+                self.y = kwargs["y"]
