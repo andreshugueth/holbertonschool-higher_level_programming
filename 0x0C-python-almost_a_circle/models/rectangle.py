@@ -85,3 +85,18 @@ class Rectangle(Base):
         msg = ('[Rectangle] ({}) {}/{} - {}/{}'.format(self.id,
                self.__x, self.__y, self.__width, self.__height))
         return msg
+
+    def update(self, *args):
+        """update function"""
+        if len(args):
+            for element, value in enumerate(args):
+                if element == 0:
+                    self.id = value
+                if element == 1:
+                    self.width = value
+                if element == 2:
+                    self.height = value
+                if element == 3:
+                    self.x = value
+                if element == 4:
+                    self.y = value
