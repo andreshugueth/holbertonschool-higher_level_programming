@@ -7,11 +7,11 @@ class Rectangle(Base):
     """Rectangle class"""
     def __init__(self, width, height, x=0, y=0, id=None):
         """Constructor class"""
-        super().__init__(id)
         self.width = width
         self.height = height
         self.x = x
         self.y = y
+        super().__init__(id)
 
     @property
     def width(self):
@@ -72,3 +72,8 @@ class Rectangle(Base):
     def area(self):
         """rectangle area"""
         return self.__width * self.__height
+
+    def display(self):
+        """Display rectangle"""
+        for elem in range(self.__height):
+            print("#" * self.__width)
