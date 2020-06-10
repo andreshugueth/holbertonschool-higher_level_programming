@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """Base class"""
 import json
+import csv
 
 
 class Base:
@@ -68,3 +69,37 @@ class Base:
             obj_list.append(cls.create(**obj))
 
         return obj_list
+
+    @classmethod
+    def save_to_file_csv(cls, list_objs):
+        """Update the class Base by adding the class method"""
+        filename = cls.__name__ + ".csv"
+        if filename == "Rectangle.csv":
+            fieldnames = ["id", "width", "height", "x", "y"]
+        else:
+            fieldnames = ["id", "size", "x", "y"]
+        with open(filename, 'w', newline='') as write_file:
+            if list_objs is not None:
+                writer = csv.DictWriter(write_file, fieldnames=fieldnames)
+                writer.writeheader()
+                for obj in list_objs:
+                    writer.writerow(obj.to_dictionary())
+            elif list_objs is None:
+                writer = csv.writer(write_file)
+                writer.writerow([[]])
+
+    @classmethod
+    def load_from_file_csv(cls):
+        """Returns a list of instances"""
+        list_objs = []
+        filename = cls.__name__ + ".csv"
+        try:
+            with open(filename, newline='') as write_file:
+                reader = csv.DictReader(write_file)
+                for row in reader:
+                    new_list = dict((k, int(v)) for k, v in row.items())
+                    list_objs.append(new_list)
+                return ([cls.create(**obj) for obj in list_objs])
+
+        except Exception:
+            return list_objs
