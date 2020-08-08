@@ -24,10 +24,11 @@ if __name__ == '__main__':
 
     conn = MySQLdb.connect(**dbconnect)
     cur = conn.cursor()
-    sql = "SELECT * FROM states WHERE name REGEXP '^N' ORDER BY id ASC"
+    sql = "SELECT * FROM states ORDER BY id ASC"
     cur.execute(sql)
     query_rows = cur.fetchall()
     for row in query_rows:
-        print(row)
+        if row[1][0] == 'N':
+            print(row)
     cur.close()
     conn.close()
