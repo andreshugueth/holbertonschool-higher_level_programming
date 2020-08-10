@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """
-script that prints the first State
-object from the database hbtn_0e_6_usa
+script that prints the State object with the name
+passed as argument from the database hbtn_0e_6_usa
 """
 from sys import argv
 from model_state import Base, State
@@ -17,9 +17,9 @@ if __name__ == "__main__":
     Session = sessionmaker(bind=engine)
     session = Session()
     state_filter = session.query(State).filter(
-        State.name.like('%{}%'.format(state_name))).first()
+        State.name.like('%{:s}%'.format(state_name))).all()
     if not state_filter:
         print("Not found")
     else:
-        print("{}".format(state_filter.id))
+        print("{}".format(state_filter[0].id))
     session.close()
