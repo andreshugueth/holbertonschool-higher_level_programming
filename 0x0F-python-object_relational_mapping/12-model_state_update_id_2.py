@@ -1,12 +1,11 @@
 #!/usr/bin/python3
 """
-script that adds the State object “Louisiana”
-to the database hbtn_0e_6_usa
+script that changes the name
+of a State object from the database hbtn_0e_6_usa
 """
 from sys import argv
 from model_state import Base, State
 from sqlalchemy import (create_engine)
-from sqlalchemy import update
 from sqlalchemy.orm import sessionmaker
 
 
