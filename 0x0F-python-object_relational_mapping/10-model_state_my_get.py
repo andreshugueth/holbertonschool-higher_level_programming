@@ -17,9 +17,9 @@ if __name__ == "__main__":
     Session = sessionmaker(bind=engine)
     session = Session()
     state_filter = session.query(State).filter(
-        State.name.like('%{:s}%'.format(state_name))).all()
+        State.name.op('regexp')(r'^{}$'.format(state_name))).first()
     if state_filter:
-        print("{}".format(state_filter[0].id))
+        print("{}".format(state_filter.id))
     else:
         print("Not found")
     session.close()
