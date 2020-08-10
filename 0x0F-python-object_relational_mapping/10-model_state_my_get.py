@@ -18,8 +18,8 @@ if __name__ == "__main__":
     session = Session()
     state_filter = session.query(State).filter(
         State.name.like('%{:s}%'.format(state_name))).all()
-    if not state_filter:
-        print("Not found")
-    else:
+    if state_filter:
         print("{}".format(state_filter[0].id))
+    else:
+        print("Not found")
     session.close()
