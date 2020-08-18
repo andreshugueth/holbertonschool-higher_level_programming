@@ -11,7 +11,7 @@ def find_peak(list_of_integers):
     for i, elem in enumerate(list_of_integers):
         if i == 0:
             continue
-        if list_of_integers[i - 1] < elem and list_of_integers[i + 1] < elem:
+        if elem > peak:
             peak = elem
 
     return peak
